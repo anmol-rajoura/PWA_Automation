@@ -13,7 +13,7 @@ public class DriverFactory {
     public static void initDriver() {
     	ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
