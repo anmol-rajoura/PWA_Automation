@@ -2,7 +2,7 @@
 Feature: Profile Creation and Management
 
 @profileCreation
-Scenario Outline: Create profile with valid details
+Scenario Outline: Create profile with valid details Name "<name>", Email "<email>", Dob "<dob>"
   When user enters name "<name>"
   And user enters email "<email>"
   And user selects date of birth "<dob>"

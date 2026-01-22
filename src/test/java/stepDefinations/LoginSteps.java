@@ -38,7 +38,7 @@ public class LoginSteps {
     public void enterCredentials(String phoneNumber) //Created local variable here also because step files access variable directly from feature file
     {
         loginPage.enterUsername(phoneNumber);
-        ExtentManager.getTest().pass("Entered Mobile Number Successfully" + phoneNumber);
+        ExtentManager.getTest().pass("Entered Mobile Number Successfully " + phoneNumber);
         Log.info("Entered valid Mobile Number" + phoneNumber);
     }
 
