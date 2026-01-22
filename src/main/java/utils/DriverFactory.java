@@ -11,12 +11,22 @@ public class DriverFactory {
     private static WebDriver driver;
 
     public static void initDriver() {
-    	ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        if (driver == null) {
+
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications");
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+
+            driver = new ChromeDriver(options);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
+        }
     }
+
 
     public static WebDriver getDriver() {
         return driver;
@@ -25,6 +35,7 @@ public class DriverFactory {
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
+            driver = null;
         }
     }
 }

@@ -5,6 +5,7 @@ import org.testng.Assert;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import pages.LoginPage;
 import reports.ExtentManager;
 import utils.DriverFactory;
@@ -13,10 +14,13 @@ import utils.Log;
 public class Hooks {
 
     @Before(order = 0)
-    public void setup() {
+    public void setup(Scenario scenario) {
         DriverFactory.initDriver();
         Log.info("Browser launched");
-        ExtentManager.startTest("Login Test");
+        //ExtentManager.startTest("Login Test");
+     // ✅ Dynamic test name from scenario
+        ExtentManager.startTest(scenario.getName());
+
     }
     
  // 🔑 TAG-BASED LOGIN HOOK
@@ -44,7 +48,12 @@ public class Hooks {
     }
 
     @After
-    public void tearDown() {
+    public void tearDown(Scenario scenario) {
+    	
+    	if (scenario.isFailed()) {
+            ExtentManager.getTest().fail("Scenario failed: " + scenario.getName());
+        }
+
         DriverFactory.quitDriver();
         Log.info("Browser closed");
         ExtentManager.endTest();

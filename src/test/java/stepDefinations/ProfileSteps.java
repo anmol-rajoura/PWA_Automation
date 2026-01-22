@@ -24,21 +24,21 @@ public class ProfileSteps {
     @When("user enters name {string}")
     public void user_enters_name(String name) {
         profilePage.enterName(name);
-        ExtentManager.getTest().pass("Entered name Successfully" + name);
+        ExtentManager.getTest().pass("Entered name Successfully " + name);
         Log.info("Entered name: " + name);
     }
 
     @When("user enters email {string}")
     public void user_enters_email(String email) {
         profilePage.enterEmail(email);
-        ExtentManager.getTest().pass("Entered email Successfully" + email);
+        ExtentManager.getTest().pass("Entered email Successfully " + email);
         Log.info("Entered email: " + email);
     }
     
     @When("user selects date of birth {string}")
     public void user_selects_date_of_birth(String dob) {
         profilePage.selectDateOfBirth(dob);
-        ExtentManager.getTest().pass("Entered dob Successfully");
+        ExtentManager.getTest().pass("Entered dob Successfully " + dob);
         Log.info("Entered dob" + dob);
     }
 

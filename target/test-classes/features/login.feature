@@ -1,7 +1,7 @@
 Feature: Login Functionality
 
 
-  Scenario Outline: User logs in with valid OTP
+  Scenario Outline: User logs in with valid Credentials "<phoneNumber>"
     Given user is on login page
     When user enters phone number "<phoneNumber>"
     And user click on send OTP button

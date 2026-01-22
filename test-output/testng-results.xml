@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-19T18:42:49 IST" name="Default suite" finished-at="2026-01-19T18:43:11 IST" duration-ms="22558">
+  <suite started-at="2026-01-22T16:01:08 IST" name="Default suite" finished-at="2026-01-22T16:01:21 IST" duration-ms="13282">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-19T18:42:49 IST" name="Default test" finished-at="2026-01-19T18:43:11 IST" duration-ms="22558">
+    <test started-at="2026-01-22T16:01:08 IST" name="Default test" finished-at="2026-01-22T16:01:21 IST" duration-ms="13282">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:42:49 IST" name="setUpClass" finished-at="2026-01-19T18:42:49 IST" duration-ms="182" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:08 IST" name="setUpClass" finished-at="2026-01-22T16:01:08 IST" duration-ms="149" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3bd37f]]>
+                <![CDATA[org.testng.TestRunner@71531dd7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:42:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-19T18:42:58 IST" duration-ms="9394" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-22T16:01:12 IST" duration-ms="3742" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User logs in with valid OTP"]]>
+                <![CDATA["User logs in with valid Credentials "9650801800""]]>
               </value>
             </param>
             <param index="1">
@@ -37,11 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:42:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-19T18:43:03 IST" duration-ms="4326" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-22T16:01:15 IST" duration-ms="2785" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User logs in with valid OTP"]]>
+                <![CDATA["User logs in with valid Credentials "9876543200""]]>
               </value>
             </param>
             <param index="1">
@@ -53,11 +53,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:43:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-19T18:43:07 IST" duration-ms="4290" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-22T16:01:18 IST" duration-ms="3374" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Create profile with valid details"]]>
+                <![CDATA["Create profile with valid details Name "Anmol", Email "anmolsingh@test.com", Dob "12/01/1999""]]>
               </value>
             </param>
             <param index="1">
@@ -66,14 +66,40 @@
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'profile should be created successfully' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("profile should be created successfully")
+public void profile_should_be_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'profile should be created successfully' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("profile should be created successfully")
+public void profile_should_be_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.profile should be created successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/profile.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:43:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-19T18:43:11 IST" duration-ms="4336" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-22T16:01:21 IST" duration-ms="3206" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Create profile with valid details"]]>
+                <![CDATA["Create profile with valid details Name "Pratik", Email "pratiksingh@test.com", Dob "12/02/1998""]]>
               </value>
             </param>
             <param index="1">
@@ -82,10 +108,36 @@
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'profile should be created successfully' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("profile should be created successfully")
+public void profile_should_be_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'profile should be created successfully' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("profile should be created successfully")
+public void profile_should_be_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.profile should be created successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/profile.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-19T18:43:11 IST" name="tearDownClass" finished-at="2026-01-19T18:43:11 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-22T16:01:21 IST" name="tearDownClass" finished-at="2026-01-22T16:01:21 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
