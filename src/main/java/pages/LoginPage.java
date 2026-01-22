@@ -47,7 +47,7 @@ public class LoginPage {
 //    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 //        return wait.until(ExpectedConditions.urlContains("/profile"));
     	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         try {
             return wait.until(
