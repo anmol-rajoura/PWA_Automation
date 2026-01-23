@@ -11,27 +11,58 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: 'temurin'
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
 
-    - name: Cache Maven dependencies
-      uses: actions/cache@v4
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
 
-    - name: Run tests
-      run: mvn clean test
+      - name: Run tests
+        run: mvn clean test
 
-    - name: Upload Extent Report
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: Automation-Report
-        path: target/ExtentReport.html
+      - name: Upload Extent Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Automation-Report
+          path: target/ExtentReport.html
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          to: ${{ secrets.EMAIL_TO }}
+          from: Automation CI <${{ secrets.EMAIL_USERNAME }}>
+
+          subject: >
+            Automation Test Report -
+            ${{ job.status == 'success' && 'PASSED ✅' || 'FAILED ❌' }}
+
+          body: |
+            Hi Team,
+
+            The automation test execution has completed.
+
+            🔹 Repository : ${{ github.repository }}
+            🔹 Branch     : ${{ github.ref_name }}
+            🔹 Status     : ${{ job.status }}
+
+            📎 Extent Report is attached with this email.
+
+            Regards,
+            Automation CI
+
+          attachments: target/ExtentReport.html
