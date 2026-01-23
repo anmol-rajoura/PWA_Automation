@@ -27,7 +27,8 @@ public class ExtentManager {
     }
 
     public static void endTest() {
-        getReporter().flush();
-    }
+        if (extent != null) {
+            extent.flush();
+        }}
 }
 

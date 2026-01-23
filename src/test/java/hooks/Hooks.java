@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import pages.LoginPage;
@@ -49,14 +50,22 @@ public class Hooks {
 
     @After
     public void tearDown(Scenario scenario) {
-    	
-    	if (scenario.isFailed()) {
-            ExtentManager.getTest().fail("Scenario failed: " + scenario.getName());
+    	try {
+            if (scenario.isFailed()) {
+                ExtentManager.getTest().fail("Scenario failed: " + scenario.getName());
+            }
+        } finally {
+            ExtentManager.endTest();        // ✅ ALWAYS runs
+            DriverFactory.quitDriver();     // ✅ Runs after flush
+            Log.info("Browser closed");
         }
-
-        DriverFactory.quitDriver();
-        Log.info("Browser closed");
+    }
+    
+    @AfterAll
+    public static void afterAll() {
         ExtentManager.endTest();
     }
+    
+
 }
 
