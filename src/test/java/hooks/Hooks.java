@@ -8,6 +8,7 @@ import pages.LoginPage;
 import reports.ExtentManager;
 import utils.DriverFactory;
 import utils.Log;
+import utils.Screenshot;
 
 public class Hooks {
 
@@ -47,13 +48,14 @@ public class Hooks {
             Log.info("Login successful via hook");
 
         } catch (Exception e) {
-            // 🔥 CRITICAL FOR CI FAILED REPORTS
+
+            // 🔥 Log hook failure in Extent
             ExtentManager.getTest()
-                .fail("Login failed in @requiresLogin hook");
+                    .fail("Login failed in @requiresLogin hook");
 
             ExtentManager.getTest().fail(e);
 
-            throw e; // IMPORTANT: do not swallow exception
+            throw e; // DO NOT swallow exception
         }
     }
 
@@ -61,12 +63,26 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) {
 
+        WebDriver driver = DriverFactory.getDriver();
+
         if (scenario.isFailed()) {
+
+            // ❌ Mark scenario failed
             ExtentManager.getTest()
-                .fail("Scenario failed: " + scenario.getName());
+                    .fail("Scenario failed: " + scenario.getName());
+
+            // 📸 Capture screenshot
+            String screenshotPath =
+                    Screenshot.captureScreenshot(driver, scenario.getName());
+
+            // 📎 Attach screenshot to Extent
+            if (screenshotPath != null) {
+                ExtentManager.getTest()
+                        .addScreenCaptureFromPath(screenshotPath);
+            }
+
         } else {
-            ExtentManager.getTest()
-                .pass("Scenario passed");
+            ExtentManager.getTest().pass("Scenario passed");
         }
 
         DriverFactory.quitDriver();
