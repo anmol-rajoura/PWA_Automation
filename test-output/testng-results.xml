@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-23T15:55:23 IST" name="Default suite" finished-at="2026-01-23T15:57:04 IST" duration-ms="100206">
+  <suite started-at="2026-01-27T20:56:05 IST" name="Default suite" finished-at="2026-01-27T20:56:16 IST" duration-ms="11021">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-23T15:55:23 IST" name="Default test" finished-at="2026-01-23T15:57:04 IST" duration-ms="100206">
+    <test started-at="2026-01-27T20:56:05 IST" name="Default test" finished-at="2026-01-27T20:56:16 IST" duration-ms="11021">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:55:23 IST" name="setUpClass" finished-at="2026-01-23T15:55:24 IST" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:05 IST" name="setUpClass" finished-at="2026-01-27T20:56:05 IST" duration-ms="194" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2b43f314]]>
+                <![CDATA[org.testng.TestRunner@2c9fdb64]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:55:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T15:55:55 IST" duration-ms="31162" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-27T20:56:08 IST" duration-ms="3189" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,25 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:55:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T15:56:18 IST" duration-ms="22971" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-27T20:56:11 IST" duration-ms="2419" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,25 +50,10 @@ at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:56:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T15:56:41 IST" duration-ms="22855" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-27T20:56:13 IST" duration-ms="2638" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -96,23 +66,10 @@ at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login failed in @requiresLogin hook expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at hooks.Hooks.loginBeforeScenario(Hooks.java:43)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:56:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T15:57:04 IST" duration-ms="23024" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-27T20:56:16 IST" duration-ms="2475" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -125,23 +82,10 @@ at hooks.Hooks.loginBeforeScenario(Hooks.java:43)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login failed in @requiresLogin hook expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at hooks.Hooks.loginBeforeScenario(Hooks.java:43)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-23T15:57:04 IST" name="tearDownClass" finished-at="2026-01-23T15:57:04 IST" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@510f3d34]" started-at="2026-01-27T20:56:16 IST" name="tearDownClass" finished-at="2026-01-27T20:56:16 IST" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

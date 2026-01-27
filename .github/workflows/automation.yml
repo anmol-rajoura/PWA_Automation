@@ -29,13 +29,15 @@ jobs:
       - name: Run tests
         run: mvn clean test
 
+      # ✅ Always upload report (PASS or FAIL)
       - name: Upload Extent Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Automation-Report
-          path: target/ExtentReport.html
+          path: target/**/*.html
 
+      # ✅ Always send email
       - name: Send Email Notification
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -60,7 +62,8 @@ jobs:
             🔹 Branch     : ${{ github.ref_name }}
             🔹 Status     : ${{ job.status }}
 
-            📎 Extent Report is attached with this email.
+            📎 Extent Report:
+            Download from GitHub Actions → Artifacts → Automation-Report
 
             Regards,
             Automation CI
