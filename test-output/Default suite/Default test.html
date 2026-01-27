@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 23 17:37:02 IST 2026</td>
+<td>Started on:</td><td>Tue Jan 27 20:33:25 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>93 seconds (93907 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11000 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,76 +76,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in with valid Credentials "9876543200"", "Login Functionality"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-	at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1620989914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1620989914'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-	at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-</pre></div></td>
-<td>23</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in with valid Credentials "9650801800"", "Login Functionality"</td>
+<td></td>
+<td>2</td>
 <td>runners.TestRunner@510f3d34</td></tr>
 <tr>
 <td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create profile with valid details Name "Anmol", Email "anmolsingh@test.com", Dob "12/01/1999"", "Profile Creation and Management"</td>
-<td><div><pre>java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at hooks.Hooks.loginBeforeScenario(Hooks.java:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace823056052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace823056052'><pre>java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at hooks.Hooks.loginBeforeScenario(Hooks.java:42)
-</pre></div></td>
-<td>23</td>
+<td></td>
+<td>2</td>
 <td>runners.TestRunner@510f3d34</td></tr>
 <tr>
 <td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create profile with valid details Name "Pratik", Email "pratiksingh@test.com", Dob "12/02/1998"", "Profile Creation and Management"</td>
-<td><div><pre>java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at hooks.Hooks.loginBeforeScenario(Hooks.java:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1288163341", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1288163341'><pre>java.lang.AssertionError: Login failed in @requiresLogin hook expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at hooks.Hooks.loginBeforeScenario(Hooks.java:42)
-</pre></div></td>
-<td>22</td>
+<td></td>
+<td>2</td>
 <td>runners.TestRunner@510f3d34</td></tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in with valid Credentials "9650801800"", "Login Functionality"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-	at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1082579195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1082579195'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.LoginSteps.loginSuccess(LoginSteps.java:67)
-	at ✽.user should be logged in successfully(file:///Users/anmolrajora/Documents/SDET_Automation/Selenium_Learnings/PWA_Automation/src/test/resources/features/login.feature:9)
-</pre></div></td>
-<td>24</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logs in with valid Credentials "9876543200"", "Login Functionality"</td>
+<td></td>
+<td>2</td>
 <td>runners.TestRunner@510f3d34</td></tr>
 </table><p>
 </body>

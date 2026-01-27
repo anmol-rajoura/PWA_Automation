@@ -27,9 +27,15 @@ public class ExtentManager {
     // 🔹 Create test per scenario (thread-safe)
     public static synchronized void startTest(String testName) {
         if (extent == null) {
-            initReport();
+            initReport(); // 🔥 ensures report exists before test creation
         }
-        test.set(extent.createTest(testName));
+
+        ExtentTest extentTest = extent.createTest(testName);
+        test.set(extentTest);
+
+        // 🔥 CRITICAL FOR CI:
+        // Ensures test node is visible even if scenario fails early
+        extentTest.info("Scenario started: " + testName);
     }
 
     // 🔹 Get current scenario test
