@@ -21,7 +21,7 @@ public class DriverFactory {
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
 
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
         }
