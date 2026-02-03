@@ -16,7 +16,7 @@ public class LoginPage {
 
     By username = By.xpath("//div[@class='input-wrapper']//input");
     By sendBtn = By.xpath("//button[normalize-space()='Send OTP']");
-    By otpBoxes = By.xpath("//input[contains(@aria-label,'Please enter OTP character')]"); 
+    By otpBoxes = By.xpath("//input[contains(@aria-label,'Please enter OTP character')]"); // Please enter OTP character
     By loginBtn = By.id("login");
     By createProfileHeader = By.xpath("//h2[text()='Create Profile']");
 
