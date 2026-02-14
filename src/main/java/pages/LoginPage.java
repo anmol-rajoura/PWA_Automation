@@ -19,6 +19,7 @@ public class LoginPage {
     By otpBoxes = By.xpath("//input[contains(@aria-label,'Please enter OTP character')]"); // Please enter OTP character
     By loginBtn = By.id("login");
     By createProfileHeader = By.xpath("//h2[text()='Create Profile']");
+   // By skipNowBtn = By.xpath("//span[@class='skip']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -52,8 +53,10 @@ public class LoginPage {
         try {
             return wait.until(
                 ExpectedConditions.or(
+                	//ExpectedConditions.visibilityOfElementLocated(skipNowBtn),	
                     ExpectedConditions.urlContains("/profile"),
                     ExpectedConditions.visibilityOfElementLocated(createProfileHeader)
+                    
                 )
             );
         } catch (TimeoutException e) {

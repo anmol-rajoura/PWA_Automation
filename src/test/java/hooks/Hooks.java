@@ -11,6 +11,7 @@ import utils.Log;
 import utils.Screenshot;
 
 public class Hooks {
+	
 
     // 🔹 Initialize Extent ONCE per test run
     @BeforeAll
@@ -36,7 +37,11 @@ public class Hooks {
             Log.info("Executing login from @requiresLogin hook");
 
             driver.get("https://stackd-dev-2.app.stackd.co.in/login");
-            loginPage.enterUsername("9650801890");
+            // Temporary jugad for random numbers
+            long base = System.currentTimeMillis() % 1000000000L;
+            String number = "9" + String.format("%09d", base);
+
+            loginPage.enterUsername(number);
             loginPage.sendOTPBtn();
             loginPage.enterOTP("123456");
 

@@ -62,8 +62,8 @@ public class ProfileSteps {
                 profilePage.isProfilePageDisplayed(),
                 "Profile creation failed: Profile page not visible"
         );
-        ExtentManager.getTest().pass("Profile created Successfully");
-        Log.info("Profile created successfully");
+        ExtentManager.getTest().pass("Profile created successfully and navigated to Search Machine");
+        Log.info("Profile created successfully and navigated to Search Machine");
     }
 
 //    @When("user clicks on Delete profile button")

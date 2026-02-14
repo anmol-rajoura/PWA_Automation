@@ -20,6 +20,7 @@ public class ProfilePage {
     By radioButton = By.xpath("//span[normalize-space()='Male']");//("//label[@class='MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1hfc2jt']");//("//input[@value='Male']"); //input[@value='Male']
     By saveAndContinueBtn = By.xpath("//button[text()='Save & Continue']");
     //By deleteAccountBtn = By.xpath("//div[@class='delete-account-button']");
+    //By skipNowBtn = By.xpath("//span[@class='skip']");
 
     // Optional success validation element
     By profileSavedMsg = By.xpath("//*[contains(text(),'Profile')]");
@@ -87,15 +88,17 @@ public class ProfilePage {
     // ===== Validations =====
 
     public boolean isProfilePageDisplayed() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
         try {
-            WebElement element = wait.until(
-                    ExpectedConditions.visibilityOfElementLocated(saveAndContinueBtn)
+            return wait.until(
+                    ExpectedConditions.urlContains("search-machine")
             );
-            return element.isDisplayed();
         } catch (TimeoutException e) {
             return false;
         }
     }
+
 
 }
