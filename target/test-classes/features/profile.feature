@@ -9,7 +9,7 @@ Scenario Outline: Create profile with valid details Name "<name>", Email "<email
   And user selects gender radio button
   And user clicks on Save and Continue button
   Then profile should be created successfully
-  
+  And user completes onboarding successfully
 Examples:
   | name   | email                  | dob        |
   | Anmol  | anmolsingh@test.com    | 12/01/1999 |
