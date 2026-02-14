@@ -67,7 +67,7 @@ public class DriverFactory {
         }
 
         // Recommended: remove implicit wait if using explicit waits
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         getDriver().manage().window().maximize();
     }
 
